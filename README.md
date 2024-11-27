@@ -1,5 +1,5 @@
 # My Way or the Slime Way
-A [p5.js](https://p5js.org/) simulation modelling the behavior of Physarum slime molds! It was developed by [Lily Martens-Wallace](https://github.com/l-e-mw), [Mohamed Ben Mekki](https://github.com/mbm64), and [Rayane Bouafia](https://github.com/rayane-b) for 2022 edition of the McGill Physics Hackathon, and won the following prizes:
+A [p5.js](https://p5js.org/) simulation modelling the behavior of Physarum slime molds! It was developed by [Lily Martens-Wallace](https://github.com/lilymw), [Mohamed Ben Mekki](https://github.com/mbm64), and [Rayane Bouafia](https://github.com/rayane-b) for 2022 edition of the McGill Physics Hackathon, and won the following prizes:
 - Second Place Overall 
 - Biophysics Prize 
 
