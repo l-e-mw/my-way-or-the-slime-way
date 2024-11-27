@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+
+    <h1>MY WAY OR THE SLIME WAY</h1>
+    <div id="slimeContainer"></div>      
+    <script src="sketch.js"></script>
+    
+    <div class= "sliderLabels" id="sliderLabels"></div>
+    <div class="sliders" id="sliders"></div>
+
+    <div class= "clearNrand button" id="clearNrand"></div>
+
+    
+
+    <div id="description" class="sized content">
+      <p>
+        <span class="emphasis"></span> We were feeling in the mood to work on cellular automata, so inspired by research on pattern formation observed in the true slime mold <i>Physarum polycephalum</i> (<a href="https://uwe-repository.worktribe.com/output/980579" style="text-decoration: none;">Jones 2010</a>), we decided to implement an interactive simulation of this organism's fascinating behavior!<br><br>
+      </p>
+      <p> <span class="emphasis">Instructions:</span>
+      <ul>
+        <li> Click anywhere on the canvas to begin growing the slime mold from that point.</li>
+        <li> Hold SHIFT and click anywhere on the canvas to kill off the slime mold in that particular area.</li>
+        <li> Hold ALT and click anywhere on the canvas to create an emitter that continuously releases slime mold particles.</li>
+        <li> Use the provided buttons to clear (remove all slime mold from the scene) and randomize (generate a new scene with random slime mold positioning) the scene.</li>
+        <li> Tinker around with the model's parameters by entering new values for: <code>r</code> (the radius of the slime mold cluster created by clicking), <code>decayT</code> (the rate at which the attracters that direct the slime mold's growth decay), <code>SA</code> (the sensor angle in radians), <code>RA</code> (the rotation angle in radians), and <code>SS</code> (the 'step size' of the slime mold). Then to update the scene and reflect changes made to these variables, press the update button. Watch as the system exhibits new and complex emergent properties!</li><br>
+      </ul>
+      </p>
+  
+      <p> <span class="emphasis">How it works:</span><br>
+
+        <br>Despite demonstrating a high capacity for cellular intelligence, the rules driving the slime mold (and their representations in our model) are actually quite simple! Following Jones' observations, we modelled the behavior of <i>Physarum polycephalum</i> as follows:
+          <br><br>Every slime mold particle has three sensors, pointing straight ahead, skewed to the left, and skewed to the right. A sensor detects the amount of chemoattractant in its target area.
+        <div class="row">
+          <div class="column">
+            <img src="diagram_670.png" alt="Snow" style="width:100%">
+          </div>
+        </div>
+        <br>Each slime mold particle begins by "sensing" for chemoattractants (evaluating the values of its different sensors). If the middle sensor detects the most chemoattractant among the three, the slime mold particle stays oriented in the same direction. If both the left and right sensors detect more chemoattractant than the middle sensor and both detect the same amount, the slime mold particle turns randomly. If the right sensor detects more chemoattractant than the middle sensor, the slime mold particle turns right. If the left sensor detects more chemoattractant than the middle sensor, the slime mold particle turns left. Then, the slime mold particle simply moves forward according to the direction specified by its sensors, according to some specified step size.<br><br>Finally, the slime mold particle deposits chemoattractants in the chemoattractant trail layer of the model, and those chemoattractants diffuse into the surrounding area and slowly decays as time goes on. Believe it or not, that's all you need to know to understand how this model functions!
+        </p><br><br>
+        <p style="text-align: center;">Also feel free to take a look at this pre-rendered simulation that we ran on a larger canvas:</p>
+        <center>
+          <iframe class="videoDemo" width="500" height="500" src="https://www.youtube.com/embed/CWU5sh9lTDU"></iframe>
+        </center>
+  
+        <div id="footer" class="sizedcontent">
+          <p> Made with ❤️ by <br><a href="https://github.com/mbm64">Mohamed Ben Mekki</a>, 
+            <a href="https://github.com/l-e-mw">Lily Martens-Wallace</a>, 
+             and <a href="https://github.com/rayane-b">Rayane Bouafia</a> <br></p>
+        </div>
+
+  </body>
+</html>
