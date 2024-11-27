@@ -3,4 +3,4 @@ A [p5.js](https://p5js.org/) simulation modelling the behavior of Physarum slime
 - Second Place Overall 
 - Biophysics Prize 
 
-The Devpost listing for this project can be found [here](https://devpost.com/software/my-way-or-the-slime-way), and an interactive demo can be accessed [here](https://l-e-mw.github.io/my-way-or-the-slime-way/).
+The Devpost listing for this project can be found [here](https://devpost.com/software/my-way-or-the-slime-way), and an interactive demo can be accessed [here](https://lilymw.github.io/my-way-or-the-slime-way/).
